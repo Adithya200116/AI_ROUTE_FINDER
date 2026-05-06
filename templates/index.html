@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Route Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>AI Route Finder</h1>
+
+    <form action="/find_route" method="POST">
+
+        <input type="text"
+               name="source"
+               placeholder="Enter Source"
+               required>
+
+        <input type="text"
+               name="destination"
+               placeholder="Enter Destination"
+               required>
+
+        <select name="algorithm">
+
+            <option value="astar">A*</option>
+
+            <option value="dijkstra">Dijkstra</option>
+
+            <option value="bfs">BFS</option>
+
+        </select>
+
+        <button type="submit">
+            Find Route
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
